@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junior 2: Class 10 - The Life Backpack</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Nunito', sans-serif; background-color: #f8fafc; }
+        h1, h2, h3, h4, h5 { font-family: 'Fredoka One', cursive; font-weight: normal; }
+        .card-pop { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+        .card-pop:hover { transform: translateY(-3px); box-shadow: 0 10px 20px -5px rgba(0,0,0,0.1); }
+        .teacher-note { border-left: 5px solid #ef4444; background-color: #fef2f2; padding: 15px; border-radius: 0 8px 8px 0; margin-bottom: 20px; font-style: italic; color: #991b1b; }
+        .verb-card.revealed { background-color: #10b981; color: white; transform: rotateY(360deg); transition: all 0.6s ease; border-color: #059669; }
+    </style>
+</head>
+<body class="p-4 md:p-8 text-gray-800">
+
+    <!-- HEADER -->
+    <header class="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl p-6 md:p-8 text-white shadow-xl mb-8 max-w-5xl mx-auto border-b-8 border-purple-300 relative overflow-hidden">
+        <div class="absolute top-0 right-0 text-9xl opacity-20 transform translate-x-10 -translate-y-5">🎒</div>
+        
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6 relative z-10">
+            <div>
+                <h1 class="text-4xl md:text-5xl mb-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-100 to-white drop-shadow-sm">The Life Backpack</h1>
+                <p class="text-xl opacity-95 font-semibold text-purple-100">Junior 2 - Class 10</p>
+            </div>
+            <div class="flex flex-wrap gap-2">
+                <span class="bg-white text-indigo-900 px-4 py-1.5 rounded-full font-bold shadow-sm text-sm">Level A2+</span>
+                <span class="bg-indigo-900 text-white px-4 py-1.5 rounded-full font-bold shadow-sm text-sm border-2 border-indigo-950">Time: 2.5h</span>
+            </div>
+        </div>
+        
+        <div class="bg-white/10 p-5 rounded-2xl backdrop-blur-sm border border-white/20 relative z-10">
+            <h3 class="text-2xl mb-2 text-purple-200">🎯 Class Objectives</h3>
+            <ul class="list-none space-y-1 font-semibold text-lg text-white">
+                <li>✓ Review Simple Past (Specific Time).</li>
+                <li>✓ Discover Present Perfect (Life Experiences).</li>
+                <li>✓ Play grammar games with Past Participles (V3).</li>
+                <li>✓ Read & comprehend "School of Rock".</li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto space-y-10">
+
+        <!-- PART 1: WARM UP -->
+        <section class="bg-white rounded-3xl p-6 md:p-8 shadow-md border-t-8 border-blue-400 card-pop">
+            <div class="teacher-note">
+                <strong>📝 SUB TEACHER GUIDE - Transition & Warm-up:</strong><br>
+                1. Have students sit in a circle or push desks back so they can stand up and move easily.<br>
+                2. Explain: "I will put a sentence on the board. If it is true for you, stand up and switch seats quickly!"<br>
+                3. The goal is high energy. This uses the Simple Past (which they know).<br>
+                4. <strong>The Bridge to Part 2:</strong> After the game, say: *"Notice how every sentence had a specific time like 'yesterday' or 'last year'? But what if we want to talk about amazing things we did in our lives, and it doesn't matter WHEN we did them? Let's find out!"*
+            </div>
+            
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-4xl">🪑</span>
+                <h2 class="text-3xl text-blue-600">Part 1: Switch Seats If...</h2>
+            </div>
+            
+            <div class="bg-blue-50 p-8 rounded-2xl border-2 border-blue-200 text-center flex flex-col justify-center min-h-[250px]">
+                <h4 class="text-blue-800 font-bold mb-4 uppercase tracking-wider">Switch seats if...</h4>
+                <p id="warmup-prompt" class="text-3xl font-black text-gray-800 mb-8 h-20 flex items-center justify-center">...you ate pizza LAST NIGHT.</p>
+                <button onclick="nextWarmup()" class="bg-blue-500 text-white font-bold px-8 py-4 rounded-full hover:bg-blue-600 shadow-md transition mx-auto text-xl">Next Prompt 🎲</button>
+            </div>
+        </section>
+
+        <!-- PART 2: GRAMMAR EXPLANATION -->
+        <section class="bg-white rounded-3xl p-6 md:p-8 shadow-md border-t-8 border-yellow-400 card-pop">
+            <div class="teacher-note">
+                <strong>📝 SUB TEACHER GUIDE - Explaining Grammar:</strong><br>
+                1. Introduce the "Life Backpack" concept. Explain that experiences are things we carry with us always.<br>
+                2. Point out the difference between V2 (Past) and V3 (Past Participle).<br>
+                3. Drill the formula: Subject + HAVE/HAS + V3. Have students repeat the examples out loud.
+            </div>
+            
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-4xl">🎒</span>
+                <h2 class="text-3xl text-yellow-600">Part 2: The Life Backpack</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div class="bg-gray-50 p-6 rounded-2xl border-2 border-gray-200">
+                    <h3 class="text-2xl text-gray-800 mb-3 border-b-2 border-gray-200 pb-2">Simple Past (V2) 📅</h3>
+                    <p class="text-gray-600 mb-4 font-bold">A specific time in the past. It is finished.</p>
+                    <ul class="space-y-2 text-lg">
+                        <li>• I <strong>went</strong> to Paris <em>in 2022</em>.</li>
+                        <li>• She <strong>ate</strong> sushi <em>yesterday</em>.</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-yellow-50 p-6 rounded-2xl border-2 border-yellow-300 shadow-inner">
+                    <h3 class="text-2xl text-yellow-800 mb-3 border-b-2 border-yellow-200 pb-2">Present Perfect (V3) ✨</h3>
+                    <p class="text-yellow-900 mb-4 font-bold">A life experience! Time doesn't matter.</p>
+                    <ul class="space-y-2 text-lg">
+                        <li>• I <strong>have gone</strong> to Paris.</li>
+                        <li>• She <strong>has eaten</strong> sushi.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-indigo-900 text-white p-6 rounded-2xl text-center">
+                <h3 class="text-xl text-indigo-200 mb-2 uppercase tracking-wider">The Magic Formula</h3>
+                <p class="text-3xl font-black mb-2">Subject + HAVE / HAS + Verb (V3)</p>
+                <p class="text-indigo-300">I, You, We, They = <span class="font-bold text-white">HAVE</span> &nbsp; | &nbsp; He, She, It = <span class="font-bold text-white">HAS</span></p>
+            </div>
+        </section>
+
+        <!-- PART 3: GRAMMAR GAMES -->
+        <section class="bg-white rounded-3xl p-6 md:p-8 shadow-md border-t-8 border-green-500 card-pop">
+            <div class="teacher-note">
+                <strong>📝 SUB TEACHER GUIDE - Running the Games:</strong><br>
+                <strong>Game 1:</strong> Call on individual students. Ask them: "What is the V3 of [Verb]?" When they guess, click the card to reveal the answer.<br>
+                <strong>Game 2:</strong> Read the sentence to the class. Ask them to shout out "Specific Time" or "Life Experience" and click the button to sort it.
+            </div>
+            
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-4xl">🎮</span>
+                <h2 class="text-3xl text-green-600">Part 3: Grammar Games</h2>
+            </div>
+
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Game 1: V3 Reveal! (Past Participles)</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10" id="v3-grid">
+                <!-- V3 Cards generated by JS -->
+            </div>
+
+            <h3 class="text-2xl font-bold text-gray-800 mb-4 border-t-2 pt-6">Game 2: The Grammar Sorter</h3>
+            <div class="bg-gray-100 p-6 rounded-2xl text-center min-h-[200px] flex flex-col justify-center border-2 border-gray-300">
+                <p id="sorter-sentence" class="text-2xl font-bold text-gray-800 mb-6">"I have seen the new Spider-Man movie."</p>
+                <div class="flex justify-center gap-4">
+                    <button onclick="checkSort('past')" class="bg-gray-600 text-white font-bold px-6 py-3 rounded-lg hover:bg-gray-700">Specific Time (Simple Past)</button>
+                    <button onclick="checkSort('perfect')" class="bg-yellow-500 text-white font-bold px-6 py-3 rounded-lg hover:bg-yellow-600">Life Experience (Present Perfect)</button>
+                </div>
+                <p id="sorter-feedback" class="mt-4 text-xl font-bold h-8"></p>
+            </div>
+        </section>
+
+        <!-- PART 4: READING RACE -->
+        <section class="bg-white rounded-3xl p-6 md:p-8 shadow-md border-t-8 border-red-500 card-pop">
+            <div class="teacher-note">
+                <strong>📝 SUB TEACHER GUIDE - Reading "School of Rock":</strong><br>
+                1. <strong>Pre-read:</strong> Go through the vocabulary on the board. Make sure they understand the words.<br>
+                2. <strong>Read:</strong> Read the text in the book together (or listen to the audio track).<br>
+                3. <strong>The Reading Race:</strong> Divide class into 3-4 teams. Click 'Next Question'. Teams must scan the book text fast. The first student to stand up gets to answer. If correct, their team gets 1 point!
+            </div>
+            
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-4xl">📖</span>
+                <h2 class="text-3xl text-red-600">Part 4: "School of Rock"</h2>
+            </div>
+
+            <div class="bg-red-50 p-6 rounded-2xl border-2 border-red-200 mb-6">
+                <h3 class="text-xl font-bold text-red-800 mb-3">Task 1: Pre-Reading Vocabulary</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-white border border-red-300 px-4 py-2 rounded-full font-bold">🎸 Band</span>
+                    <span class="bg-white border border-red-300 px-4 py-2 rounded-full font-bold">🎤 Instrument</span>
+                    <span class="bg-white border border-red-300 px-4 py-2 rounded-full font-bold">🥁 Perform</span>
+                    <span class="bg-white border border-red-300 px-4 py-2 rounded-full font-bold">🎫 Concert</span>
+                </div>
+            </div>
+
+            <div class="bg-gray-900 text-white p-6 rounded-2xl text-center border-4 border-red-400">
+                <h3 class="text-2xl text-red-400 mb-2">Task 2: The Reading Race 🏁</h3>
+                <p class="text-gray-300 mb-6">Find the answer in your book as fast as you can. Stand up to answer!</p>
+                
+                <p id="race-question" class="text-3xl font-black mb-8 h-20 flex items-center justify-center">Are you ready?</p>
+                <button onclick="nextRaceQuestion()" class="bg-red-500 text-white font-bold px-8 py-3 rounded-full hover:bg-red-600 shadow-md transition">Show Next Question</button>
+            </div>
+        </section>
+
+        <!-- PART 5: THE UNDERCOVER AGENT -->
+        <section class="bg-white rounded-3xl p-6 md:p-8 shadow-md border-t-8 border-gray-800 card-pop">
+            <div class="teacher-note">
+                <strong>📝 SUB TEACHER GUIDE - The Detective Game:</strong><br>
+                1. Hand out small pieces of paper. Each student writes down ONE secret life experience using "I have..." (e.g., "I have broken an arm"). They hand them to the teacher.<br>
+                2. Mix the papers up. Hand one paper to each student. THIS IS THEIR NEW SECRET IDENTITY.<br>
+                3. Display the target profile on the board. Students must walk around asking <em>"Have you ever...?"</em> to find the student holding the paper that matches the board.
+            </div>
+            
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-4xl">🕵️‍♂️</span>
+                <h2 class="text-3xl text-gray-800">Part 5: The Undercover Agent</h2>
+            </div>
+            
+            <div class="bg-gray-100 p-8 rounded-2xl border-4 border-gray-800 text-center relative overflow-hidden">
+                <div class="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-900 via-gray-900 to-transparent"></div>
+                <h3 class="text-2xl font-black text-gray-800 mb-4 relative z-10 uppercase tracking-widest">WANTED: Undercover Agent</h3>
+                <p class="text-lg text-gray-700 mb-6 font-bold relative z-10">Walk around the room. Ask your classmates questions to find the person who matches this profile!</p>
+                
+                <div class="bg-white p-6 rounded-xl shadow-lg max-w-md mx-auto relative z-10 border-2 border-gray-300 text-left">
+                    <p class="text-gray-600 font-bold mb-2">Ask them:</p>
+                    <ul class="text-xl font-black text-gray-800 space-y-4">
+                        <li>1. "Have you ever <span class="text-red-600 border-b-2 border-red-600">met a famous person?</span>"</li>
+                        <li>2. "Have you ever <span class="text-red-600 border-b-2 border-red-600">traveled on an airplane?</span>"</li>
+                        <li>3. "Have you ever <span class="text-red-600 border-b-2 border-red-600">eaten strange food?</span>"</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- PART 6: MY LIFE TIMELINE -->
+        <section class="bg-white rounded-3xl p-6 md:p-8 shadow-md border-t-8 border-teal-500 card-pop">
+            <div class="teacher-note">
+                <strong>📝 SUB TEACHER GUIDE - Timeline & Gallery Walk:</strong><br>
+                1. Pass out blank paper and markers.<br>
+                2. Students draw a timeline of their life and write 3 things they <strong>have done</strong> (experiences) using Present Perfect.<br>
+                3. Important: Direct their attention to the 3 examples on the board so they know exactly what to do.<br>
+                4. <strong>Gallery Walk:</strong> Put the timelines on the desks. Students walk around, read their friends' timelines, and write a positive comment or draw a star on their favorites.
+            </div>
+            
+            <div class="flex items-center gap-3 mb-6">
+                <span class="text-4xl">🖼️</span>
+                <h2 class="text-3xl text-teal-600">Part 6: My Life Timeline</h2>
+            </div>
+            
+            <p class="text-xl text-gray-700 mb-6 font-bold">Draw a timeline of your life. Write 3 amazing things you HAVE DONE!</p>
+
+            <div class="bg-teal-50 p-6 rounded-2xl border-2 border-teal-200">
+                <h4 class="font-black text-teal-800 text-xl mb-4">Good Examples to Copy:</h4>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm border border-teal-100">
+                        <span class="text-3xl">✈️</span>
+                        <p class="text-lg font-bold text-gray-700">"I <span class="text-teal-600">have traveled</span> to Bogota."</p>
+                    </div>
+                    <div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm border border-teal-100">
+                        <span class="text-3xl">🚲</span>
+                        <p class="text-lg font-bold text-gray-700">"I <span class="text-teal-600">have learned</span> to ride a bike."</p>
+                    </div>
+                    <div class="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm border border-teal-100">
+                        <span class="text-3xl">⚽</span>
+                        <p class="text-lg font-bold text-gray-700">"I <span class="text-teal-600">have played</span> in a football tournament."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // --- Warm Up Logic ---
+        const warmupPrompts = [
+            "...you ate pizza LAST NIGHT.",
+            "...you played a video game YESTERDAY.",
+            "...you watched a movie THIS WEEKEND.",
+            "...you traveled to another city LAST YEAR.",
+            "...you went to bed late LAST NIGHT.",
+            "...you drank soda TODAY.",
+            "...you studied for a test LAST WEEK."
+        ];
+
+        function nextWarmup() {
+            const el = document.getElementById('warmup-prompt');
+            const randomPrompt = warmupPrompts[Math.floor(Math.random() * warmupPrompts.length)];
+            el.innerText = randomPrompt;
+            el.classList.add('scale-105', 'text-blue-600');
+            setTimeout(() => el.classList.remove('scale-105', 'text-blue-600'), 200);
+        }
+
+        // --- V3 Memory Match Logic ---
+        const verbs = [
+            { v1: 'See', v3: 'Seen' }, { v1: 'Go', v3: 'Gone' }, 
+            { v1: 'Eat', v3: 'Eaten' }, { v1: 'Do', v3: 'Done' },
+            { v1: 'Break', v3: 'Broken' }, { v1: 'Speak', v3: 'Spoken' },
+            { v1: 'Take', v3: 'Taken' }, { v1: 'Write', v3: 'Written' }
+        ];
+
+        const grid = document.getElementById('v3-grid');
+        verbs.forEach((v, index) => {
+            const btn = document.createElement('button');
+            btn.className = 'verb-card bg-white border-2 border-gray-300 p-4 rounded-xl text-center font-bold text-lg text-gray-700 shadow-sm cursor-pointer';
+            btn.innerHTML = `<span class="block text-sm text-gray-500 mb-1">Base Verb:</span> ${v.v1}`;
+            btn.onclick = () => {
+                btn.classList.add('revealed');
+                btn.innerHTML = `<span class="block text-sm text-emerald-100 mb-1">V3:</span> ${v.v3}`;
+            };
+            grid.appendChild(btn);
+        });
+
+        // --- Grammar Sorter Logic ---
+        const sorterSentences = [
+            { text: "I went to the cinema on Saturday.", type: "past" },
+            { text: "She has played the guitar many times.", type: "perfect" },
+            { text: "We ate sushi for dinner yesterday.", type: "past" },
+            { text: "I have met a famous singer.", type: "perfect" },
+            { text: "He broke his arm in 2021.", type: "past" },
+            { text: "They have traveled to Canada.", type: "perfect" }
+        ];
+        
+        let currentSorterIndex = 0;
+
+        function loadSorterSentence() {
+            if(currentSorterIndex >= sorterSentences.length) {
+                document.getElementById('sorter-sentence').innerText = "🎉 All sorted! Great job!";
+                return;
+            }
+            document.getElementById('sorter-sentence').innerText = `"${sorterSentences[currentSorterIndex].text}"`;
+            document.getElementById('sorter-feedback').innerText = "";
+        }
+
+        function checkSort(guessType) {
+            if(currentSorterIndex >= sorterSentences.length) return;
+            const correctType = sorterSentences[currentSorterIndex].type;
+            const feedbackEl = document.getElementById('sorter-feedback');
+            
+            if(guessType === correctType) {
+                feedbackEl.innerText = "✅ Correct!";
+                feedbackEl.className = "mt-4 text-xl font-bold h-8 text-green-600";
+                currentSorterIndex++;
+                setTimeout(loadSorterSentence, 1200);
+            } else {
+                feedbackEl.innerText = "❌ Oops! Try again!";
+                feedbackEl.className = "mt-4 text-xl font-bold h-8 text-red-600";
+            }
+        }
+        
+        // Initialize Sorter
+        loadSorterSentence();
+
+        // --- Reading Race Logic ---
+        const raceQuestions = [
+            "1. What is the name of the main character?",
+            "2. Which instrument does he play?",
+            "3. Where do they practice their music?",
+            "4. How many people are in the band?",
+            "5. What is their teacher's name?",
+            "6. What song are they learning to play?"
+        ];
+        
+        let raceIndex = 0;
+        function nextRaceQuestion() {
+            const el = document.getElementById('race-question');
+            if(raceIndex < raceQuestions.length) {
+                el.innerText = raceQuestions[raceIndex];
+                raceIndex++;
+            } else {
+                el.innerText = "🏆 Race Finished!";
+            }
+            el.classList.add('scale-105', 'text-red-500');
+            setTimeout(() => el.classList.remove('scale-105', 'text-red-500'), 200);
+        }
+    </script>
+</body>
+</html>
